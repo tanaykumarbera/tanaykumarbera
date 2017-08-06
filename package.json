@@ -1,0 +1,42 @@
+{
+  "name": "tanay.co",
+  "version": "1.0.0",
+  "description": "A npm repo to build the static files over github pages, as well as tanay.co",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tanaykumarbera/tanaykumarbera.git"
+  },
+  "keywords": [
+    "tanay.co",
+    "tanaykumarbera.github.io",
+    "webpack",
+    "html",
+    "portfolio",
+    "theme"
+  ],
+  "author": "Tanay Kumar Bera",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tanaykumarbera/tanaykumarbera/issues"
+  },
+  "homepage": "https://github.com/tanaykumarbera/tanaykumarbera#readme",
+  "devDependencies": {
+    "autoprefixer": "^7.1.2",
+    "css-loader": "^0.28.4",
+    "handlebars": "^4.0.10",
+    "handlebars-template-loader": "^0.8.0",
+    "json-loader": "^0.5.7",
+    "less": "^2.7.2",
+    "less-loader": "^4.0.5",
+    "less-plugin-group-css-media-queries": "^1.1.1",
+    "postcss-loader": "^2.0.6",
+    "static-site-generator-webpack-plugin": "^3.4.1",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.4.1",
+    "yaml-loader": "^0.5.0"
+  }
+}
