@@ -52,5 +52,11 @@ module.exports = {
     })
   ],
   devtool: 'source-map',
-  watch: true
+  devServer: {
+    contentBase: './dist',
+    inline: false,
+    open: true,
+    host: '0.0.0.0',
+    port: '7002'
+  }
 }
