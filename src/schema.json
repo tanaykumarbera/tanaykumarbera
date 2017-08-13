@@ -1,0 +1,15 @@
+{
+  "@context": "http://www.schema.org",
+  "@type": "person",
+  "name": "Tanay Kumar Bera",
+  "url": "https://tanay.co",
+  "sameAs": "https://tanaykumarbera.github.io",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Bengaluru",
+    "addressRegion": "Karnataka",
+    "addressCountry": "India"
+  },
+  "email": "tanaykumarbera@gmail.com",
+  "birthDate": "1993-06-29"
+}
