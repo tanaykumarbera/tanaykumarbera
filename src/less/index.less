@@ -1,5 +1,100 @@
 @import './global.less';
 
-body {
-  font-family: "Roboto", sans-serif;
+@imageSize: 240;
+@imagePadding: 10;
+@particleSize: 10;
+@xShift: (@imageSize / 2) + @imagePadding;
+@xpShift: (@particleSize / 4) + (@imageSize / 2) + @imagePadding;
+
+@pTopXtra: @particleSize / 2;
+@pLeftXtra: @particleSize / 2;
+@particleColor: white;
+
+.tb-header {
+  display: table;
+  min-height: 100vh;
+  width: 100%;
+  height: 100%;
+  background: @primaryColor;
+}
+
+.tb-header-wrap {
+  display: table-cell;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.tb-header-contents {
+  display: inline-block;
+  max-width: 1000px;
+  width: 100%;
+  color: white;
+}
+
+.tb-img-holder {
+  width: 33%;
+  float: right;
+  position: relative;
+  img {
+    width: unit(@imageSize, px);
+    border: none;
+    border-radius: 50%;
+    box-shadow: -3px 0 0px 2px @particleColor;
+    padding: unit(@imagePadding, px);
+  }
+  &::after {
+    content: ' ';
+    display: block;
+    top: calc(~"50% - " unit(@pTopXtra, px));
+    left: calc(~"50% - " unit(@pLeftXtra, px));
+    width: unit(@particleSize, px);
+    height: unit(@particleSize, px);
+    position: absolute;
+    border: none;
+    border-radius: 50%;
+    background-color: @particleColor;
+    animation: orbit 2s linear infinite;
+  }
+}
+
+.tb-meta-holder {
+  width: 66%;
+  height: 20vh;
+  text-align: center;
+  h1 {
+    font-weight: 100;
+    font-size: 2.4em;
+    letter-spacing: 0.08em;
+    strong {
+      font-weight: 300;
+    }
+  }
+  p {
+    text-align: justify;
+    text-align-last: right;
+    font-size: 0.8em;
+    letter-spacing: 0.1em;
+  }
+}
+
+.tb-social-links {
+  margin-top: 4em;
+  font-size: 0.6em;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  a {
+    display: inline-block;
+    margin: 0 1em;
+    color: inherit;
+  }
+}
+
+@keyframes orbit {
+  0% {  transform: rotate(0deg) translateX(unit(@xShift , px)); }
+  25% {  transform: rotate(45deg) translateX(unit(@xShift , px)); }
+  50% {  transform: rotate(180deg) translateX(unit(@xpShift , px)); }
+  75% {  transform: rotate(315deg) translateX(unit(@xpShift , px)); }
+  100% {  transform: rotate(360deg) translateX(unit(@xShift , px)); }
 }

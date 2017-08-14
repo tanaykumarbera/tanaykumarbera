@@ -17,6 +17,23 @@
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
   </head>
   <body>
-    <h1>Welcome to the mobile web</h1>
+    <section class="tb-header">
+      <div class="tb-header-wrap">
+        <div class="tb-header-contents block-group">
+          <div class="tb-img-holder block">
+            <img src="/img/pattern.png" alt="{{ config.person.name }}"/>
+          </div>
+          <div class="tb-meta-holder block">
+            <h1>{{ config.person.firstName }} <strong>{{ config.person.lastName}}</strong></h1>
+            <p>{{ config.person.description }}</p>
+            <div class="tb-social-links">
+              {{#each config.person.social }}
+                <a target="_blank" rel="noopener" href="{{ url }}">{{ site }}</a>
+              {{/each}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
