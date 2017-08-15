@@ -2,6 +2,8 @@ site:
   name: Tanay Kumar Bera
   url: https://tanay.co
   canonicalUrl: https://tanaykumarbera.github.io
+  blog: https://blog.tanay.co
+  blogRead: https://blog.tanay.co/posts
 person:
   name: Tanay Kumar Bera
   firstName: Tanay Kumar
@@ -10,6 +12,8 @@ person:
   sameAs: https://tanaykumarbera.github.io
   description: A computer guy with some sense of aestheticism. Bong by birth, and hence comes the natural affinity towards food. Love cooking, travelling and reading. I am one of those guys you know who can pull and point his Nikon at anything; still a learner though. I also love talking to new people. It's like peeking into an entirely different reality which co exists with yours. Who knows how is this going to affect the future course of actions! Get in touch, and let us explore it together ;)
   social:
+    - site: 'BLOG'
+      url: 'https://blog.tanay.co'
     - site: 'TWITTER'
       url: 'https://twitter.com/tanaykumarbera'
     - site: 'LINKEDIN'
