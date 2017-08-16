@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+    <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
 
     <title>{{ config.site.name }}</title>
     <link rel="canonical" href="{{ config.site.url }}">
@@ -13,7 +15,7 @@
 
     {{!-- Page styling --}}
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet" />
-    <style amp-custom>{{{ styleLandingPage }}}</style>
+    <style amp-custom>{{{ style }}}</style>
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
   </head>
   <body>
@@ -35,5 +37,64 @@
         </div>
       </div>
     </section>
+    <section class="tb-posts">
+      <div class="tb-posts-wrap">
+        <h2>I write!</h2>
+        <p class="tb-posts-excerpt">
+          There are millions of thoughts crossing my mind, few of which might be of significance to someone. So, I like to jolt down my ideas and experiences of my life. It can be funny or stupid, but it do bridges the gap in between the future me and the current me. Time travel eenh!
+        </p>
+        <amp-carousel height="324"
+          layout="fixed-height"
+          type="carousel">
+            {{#each posts }}
+              {{> post }}
+            {{/each}}
+        </amp-carousel>
+        <a target="_blank" href="{{ config.site.blogRead }}" class="tb-posts-read-more" rel="noopener">READ MORE</a>
+      </div>
+    </section>
+    <section class="tb-connect">
+      <div class="block-group">
+        <div class="block tb-twitter">
+          <a class="twitter-timeline tb-twitter-placeholder" data-height="80vh" href="https://twitter.com/tanaykumarbera">FOLLOW MY TWITTER</a>
+        </div>
+        <div class="block tb-follow">
+          <div class="tb-instagram">
+            <amp-iframe width="490" height="246"
+              sandbox="allow-scripts"
+              layout="responsive"
+              frameborder="0"
+              allowTransparency="true"
+              src="https://snapwidget.com/embed/425956">
+            </amp-iframe>
+            <a href="{{ config.site.instagram }}">
+              <amp-img alt="Follow tanay on Instagram"
+                src="/img/insta.png"
+                width="160"
+                height="48"
+              >
+                <noscript>
+                  <img src="/img/insta.png"
+                    alt="Follow tanay on Instagram"
+                    height="48"
+                  />
+                </noscript>
+              </amp-img>
+            </a>
+          </div>
+          <div class="tb-card-wrap">
+            <div class="tb-card">
+              <p>
+                {{ config.card.description }}
+              </p>
+              <a target="_top" href="mailto:{{ config.person.email }}?Subject={{ config.card.emailSubject }}">SAY HI</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+    </footer>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   </body>
 </html>

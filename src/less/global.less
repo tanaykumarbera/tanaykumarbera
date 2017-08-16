@@ -1,6 +1,7 @@
 @import './pocketgrid.css';
 
 @primaryColor: #25ADC5;
+@shadowBg: #BBB;
 
 .DEVICE_XTRALARGER(@rules) {
   @media (min-width : 1824px) { @rules(); }
@@ -34,6 +35,10 @@
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     @rules();
   }
+}
+
+.add_shadow() {
+  box-shadow: 1px 1px 2px 0px @shadowBg;
 }
 
 html, body {
