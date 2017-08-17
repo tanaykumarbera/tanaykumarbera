@@ -23,7 +23,20 @@
       <div class="tb-header-wrap">
         <div class="tb-header-contents block-group">
           <div class="tb-img-holder block">
-            <img src="/img/pattern.png" alt="{{ config.person.name }}"/>
+            <div class="tb-img">
+              <amp-img alt="{{ config.person.name }}"
+                src="/img/pattern.png"
+                width="240"
+                height="240"
+              >
+                <noscript>
+                  <img src="/img/pattern.png"
+                    alt="{{ config.person.name }}"
+                    height="240"
+                  />
+                </noscript>
+              </amp-img>
+            </div>
           </div>
           <div class="tb-meta-holder block">
             <h1>{{ config.person.firstName }} <strong>{{ config.person.lastName}}</strong></h1>
@@ -65,7 +78,7 @@
               layout="responsive"
               frameborder="0"
               allowTransparency="true"
-              src="https://snapwidget.com/embed/425956">
+              src="{{ config.site.instagramfeed }}">
             </amp-iframe>
             <a href="{{ config.site.instagram }}">
               <amp-img alt="Follow tanay on Instagram"

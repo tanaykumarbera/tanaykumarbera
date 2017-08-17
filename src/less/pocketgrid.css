@@ -33,7 +33,7 @@
 .block-group > .block-group {
   clear: none;
   float: left;
-  margin: 0 !important;
+  margin: 0;
 }
 
 /* Default block */
