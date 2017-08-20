@@ -4,7 +4,8 @@
   "description": "A npm repo to build the static files over github pages, as well as tanay.co",
   "main": "index.js",
   "scripts": {
-    "build": "webpack"
+    "build": "NODE_ENV='production' webpack --progress -p",
+    "dev": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -23,7 +24,7 @@
   "bugs": {
     "url": "https://github.com/tanaykumarbera/tanaykumarbera/issues"
   },
-  "homepage": "https://github.com/tanaykumarbera/tanaykumarbera#readme",
+  "homepage": "https://tanay.co",
   "devDependencies": {
     "autoprefixer": "^7.1.2",
     "css-loader": "^0.28.4",
@@ -37,6 +38,7 @@
     "static-site-generator-webpack-plugin": "^3.4.1",
     "style-loader": "^0.18.2",
     "webpack": "^3.4.1",
+    "webpack-dev-server": "^2.7.1",
     "yaml-loader": "^0.5.0"
   }
 }

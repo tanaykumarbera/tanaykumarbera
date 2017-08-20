@@ -1,0 +1,57 @@
+@import './pocketgrid.css';
+
+@primaryColor: #25ADC5;
+@shadowBg: #BBB;
+
+.DEVICE_XTRALARGER(@rules) {
+  @media (min-width : 1824px) { @rules(); }
+}
+
+.DEVICE_DESKTOPS(@rules) {
+  @media (max-width: 1824px) { @rules(); }
+}
+
+.DEVICE_LAPTOPS(@rules) {
+  @media (max-width: 1224px) { @rules(); }
+}
+
+.DEVICE_TABLETS(@rules) {
+  @media (max-width: 1024px) { @rules(); }
+}
+
+.DEVICE_PORTRAIT(@rules) {
+  @media (orientation: portrait), (max-width: 986px) { @rules(); }
+}
+
+.DEVICE_SMALL(@rules) {
+  @media (max-width: 800px) { @rules(); }
+}
+
+.DEVICE_MOBILE(@rules) {
+  @media (max-width: 480px) { @rules(); }
+}
+
+.DEVICE_RETINA(@rules) {
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    @rules();
+  }
+}
+
+.add_shadow() {
+  box-shadow: 1px 1px 2px 0px @shadowBg;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+}
+
+a {
+  text-decoration: none;
+}
+

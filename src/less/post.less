@@ -1,0 +1,42 @@
+@featureImgBg: #CCC;
+@featureHead: #282D2C;
+@borderRadius: 2px;
+
+.tb-post-item {
+  width: 240px;
+  height: 320px;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 1em;
+  margin-bottom: 4px;
+  background-color: white;
+  border-radius: @borderRadius;
+  background-color: white;
+  position: relative;
+  .add_shadow();
+  amp-img {
+    background-color: @featureImgBg;
+    border-radius: @borderRadius @borderRadius 0 0;
+  }
+  h2 {
+    font-size: 1em;
+    font-weight: 400;
+    white-space: initial;
+    color: @featureHead;
+    margin: 0.6em;
+  }
+  .tbp-datetime {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 1em;
+    font-size: 0.8em;
+    font-weight: 300;
+    color: #CCC;
+    padding-top: 1em;
+  }
+  &:hover {
+    box-shadow: 1px 1px 4px 0px #aaa;
+  }
+}

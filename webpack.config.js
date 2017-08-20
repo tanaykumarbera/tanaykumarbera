@@ -2,6 +2,8 @@ var path = require('path');
 var LessPluginGroupMediaQueries = require('less-plugin-group-css-media-queries');
 var StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
 
+var isProduction = process.env.NODE_ENV === 'production';
+
 module.exports = {
   entry: './src/index.js',
   output: {
@@ -20,7 +22,11 @@ module.exports = {
       }, {
         test: /\.less$/,
         use: [
-          { loader: 'css-loader' },
+          { loader: 'css-loader',
+            options: {
+              minimize: isProduction
+            }
+          },
           { loader: 'postcss-loader' },
           { loader: 'less-loader',
             options: {
@@ -52,5 +58,11 @@ module.exports = {
     })
   ],
   devtool: 'source-map',
-  watch: true
+  devServer: {
+    contentBase: './dist',
+    inline: false,
+    open: true,
+    host: '0.0.0.0',
+    port: '7002'
+  }
 }

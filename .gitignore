@@ -57,3 +57,8 @@ typings/
 # dotenv environment variables file
 .env
 
+# Since this files are dynamically generated, ignore it for dev purpose
+# When want to publish, force add using git add -f /path/to/file
+# reference https://stackoverflow.com/a/8006450
+dist/index.html
+dist/error.html

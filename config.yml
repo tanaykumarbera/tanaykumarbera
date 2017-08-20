@@ -1,3 +1,31 @@
 site:
-  name: tanay.co
+  name: Tanay Kumar Bera
   url: https://tanay.co
+  canonicalUrl: https://tanaykumarbera.github.io
+  blog: https://blog.tanay.co
+  blogRead: https://blog.tanay.co/posts
+  twitter: https://twitter.com/tanaykumarbera
+  instagram: https://www.instagram.com/tanaykumarbera
+  instagramfeed: https://snapwidget.com/embed/425956
+card:
+  description: I am a software developer at Passport Inc, a Charlotte based startup leading in parking and transit solutions. I work mostly on Android and web frontends. If there is something I can help you with, don't hesitate to get in touch. I will try to get back to you as soon as I can.
+  emailSubject: 'Just visited your site'
+person:
+  name: Tanay Kumar Bera
+  firstName: Tanay Kumar
+  lastName: Bera
+  email: tanaykumarbera@gmail.com
+  url: https://tanay.co
+  sameAs: https://tanaykumarbera.github.io
+  description: A computer guy with some sense of aestheticism. Bong by birth, and hence comes the natural affinity towards food. Love cooking, travelling and reading. I am one of those guys you know who can pull and point his Nikon at anything; still a learner though. I also love talking to new people. It's like peeking into an entirely different reality which co exists with yours. Who knows how is this going to affect the future course of actions! Get in touch, and let us explore it together ;)
+  social:
+    - site: 'BLOG'
+      url: 'https://blog.tanay.co'
+    - site: 'TWITTER'
+      url: 'https://twitter.com/tanaykumarbera'
+    - site: 'LINKEDIN'
+      url: 'https://linkedin.com/in/tanaykumarbera/'
+    - site: 'INSTAGRAM'
+      url: 'https://www.instagram.com/tanaykumarbera'
+    - site: 'GITHUB'
+      url: 'https://github.com/tanaykumarbera'
