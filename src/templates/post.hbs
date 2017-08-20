@@ -1,15 +1,15 @@
 <div class="tb-post-item">
-  <amp-img alt="{{ title }}"
-    src="{{#if feature_image}}{{ feature_image }}{{else}}{{ image }}{{/if}}"
+  <amp-img alt="\{{ title }}"
+    src="\{{ feature_image }}"
     width="240"
     height="172"
     layout="responsive">
     <noscript>
-      <img src="{{#if feature_image}}{{ feature_image }}{{else}}{{ image }}{{/if}}"
-        alt="{{ title }}"
+      <img src="\{{ feature_image }}"
+        alt="\{{ title }}"
         width="240" />
     </noscript>
   </amp-img>
-  <h2>{{ title }}</h2>
-  <span class="tbp-datetime">{{ created_at }}</span>
+  <h2>\{{ title }}</h2>
+  <span class="tbp-datetime">\{{ created_at }}</span>
 </div>

@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
     <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+    <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.1.js"></script>
     <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
 
     <title>{{ config.site.name }}</title>
@@ -56,13 +58,22 @@
         <p class="tb-posts-excerpt">
           There are millions of thoughts crossing my mind, few of which might be of significance to someone. So, I like to jolt down my ideas and experiences of my life. It can be funny or stupid, but it do bridges the gap in between the future me and the current me. Time travel eenh!
         </p>
-        <amp-carousel height="324"
+        <amp-list width="auto"
+          height="324"
           layout="fixed-height"
-          type="carousel">
-            {{#each posts }}
-              {{> post }}
-            {{/each}}
-        </amp-carousel>
+          src="https://blog.tanay.co/json/recent"
+          class="m1">
+          <template type="amp-mustache"
+            id="amp-template-recent-posts">
+            <amp-carousel height="324"
+              layout="fixed-height"
+              type="carousel">
+              \{{#posts}}
+                {{> post }}
+              \{{/posts}}
+            </amp-carousel>
+          </template>
+        </amp-list>
         <a target="_blank" href="{{ config.site.blogRead }}" class="tb-posts-read-more" rel="noopener">READ MORE</a>
       </div>
     </section>
