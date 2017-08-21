@@ -2,9 +2,9 @@ var path = require('path');
 var LessPluginGroupMediaQueries = require('less-plugin-group-css-media-queries');
 var StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
 
-var isProduction = process.env.NODE_ENV === 'production';
+const isProduction = process.env.NODE_ENV === 'production';
 
-module.exports = {
+const config = {
   entry: './src/index.js',
   output: {
     filename: 'index.js',
@@ -19,6 +19,15 @@ module.exports = {
           { loader: 'json-loader' },
           { loader: 'yaml-loader' }
         ]
+      }, {
+        exclude: /(node_modules|dist)/,
+        test: /\.jsx?$/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['es2015']
+          }
+        }
       }, {
         test: /\.less$/,
         use: [
@@ -56,13 +65,18 @@ module.exports = {
         '/eror.html'
       ]
     })
-  ],
-  devtool: 'source-map',
-  devServer: {
+  ]
+};
+
+if (!isProduction) {
+  config.devtool = 'source-map';
+  config.devServer = {
     contentBase: './dist',
     inline: false,
     open: true,
     host: '0.0.0.0',
     port: '7002'
-  }
+  };
 }
+
+module.exports = config;
