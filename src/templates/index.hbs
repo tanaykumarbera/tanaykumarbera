@@ -27,9 +27,10 @@
           <div class="tb-img-holder block">
             <div class="tb-img">
               <amp-img alt="{{ config.person.name }}"
-                src="/img/pattern.png"
+                src="{{ config.person.image }}?s=240"
                 width="240"
                 height="240"
+                srcset="{{ config.person.image }}?s=480 480w, {{ config.person.image }}?s=240 240w, {{ config.person.image }}?s=160 160w"
                 layout="responsive"
               >
                 <noscript>
