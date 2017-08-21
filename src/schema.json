@@ -2,13 +2,27 @@
   "@context": "http://www.schema.org",
   "@type": "person",
   "name": "Tanay Kumar Bera",
+  "givenName": "Tanay",
+  "familyName": "Bera",
+  "gender": {
+    "@type": "GenderType",
+    "supersededBy": "http://schema.org/Male"
+  },
   "url": "https://tanay.co",
-  "sameAs": "https://tanaykumarbera.github.io",
   "address": {
     "@type": "PostalAddress",
+    "streetAddress": "Kormangala",
+    "postOfficeBoxNumber": "Bengaluru",
     "addressLocality": "Bengaluru",
     "addressRegion": "Karnataka",
+    "postalCode": "560034",
     "addressCountry": "India"
+  },
+  "jobTitle": "Software Developer",
+  "worksFor": {
+    "@type": "Corporation",
+    "name": "Passport Inc",
+    "url": "https://passportinc.com"
   },
   "email": "tanaykumarbera@gmail.com",
   "birthDate": "1993-06-29"
