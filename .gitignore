@@ -62,3 +62,5 @@ typings/
 # reference https://stackoverflow.com/a/8006450
 dist/index.html
 dist/error.html
+dist/index.js
+dist/index.js.map

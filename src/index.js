@@ -18,18 +18,16 @@ import config from '../config';
 /* REGISTER POST TEMPLATE AS PATIAL */
 Handlebars.registerPartial('post', post);
 
-import posts from './tposts.js';
-
 /* EXPORT METHOD TO BE USED BY STATIC SITE GENERATOR */
 export default () => ({
   '/index.html': renderLandingPage({
     config,
     style: styleLandingPage,
-    schema: JSON.stringify(schemaLandingPage),
-    posts
+    schema: JSON.stringify(schemaLandingPage)
   }),
-  '/error.html': renderErrorPage({
-    config,
-    styleErrorPage
-  })
+  // disable for now
+  // '/error.html': renderErrorPage({
+  //   config,
+  //   styleErrorPage
+  // })
 });
