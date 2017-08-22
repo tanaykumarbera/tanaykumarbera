@@ -7,6 +7,7 @@
     <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
     <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.1.js"></script>
     <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
 
     <title>{{ config.site.name }}</title>
     <link rel="canonical" href="{{ config.site.url }}">
@@ -47,7 +48,7 @@
             <p>{{ config.person.description }}</p>
             <div class="tb-social-links">
               {{#each config.person.social }}
-                <a target="_blank" rel="noopener" href="{{ url }}">{{ site }}</a>
+                <a target="_blank" rel="noopener" href="{{ url }}" data-vars-outbound-link="{{ url }}">{{ site }}</a>
               {{/each}}
             </div>
           </div>
@@ -76,13 +77,13 @@
             </amp-carousel>
           </template>
         </amp-list>
-        <a target="_blank" href="{{ config.site.blogRead }}" class="tb-posts-read-more" rel="noopener">READ MORE</a>
+        <a target="_blank" href="{{ config.site.blogRead }}" class="tb-posts-read-more" rel="noopener" data-vars-outbound-link="{{ config.site.blogRead }}">READ MORE</a>
       </div>
     </section>
     <section class="tb-connect">
       <div class="block-group">
         <div class="block tb-twitter">
-          <a class="twitter-timeline tb-twitter-placeholder" data-height="600px" href="https://twitter.com/tanaykumarbera">FOLLOW MY TWITTER</a>
+          <a class="twitter-timeline tb-twitter-placeholder"  data-vars-outbound-link="{{ config.site.twitter }}" data-height="600px" href="{{ config.site.twitter }}">FOLLOW MY TWITTER</a>
         </div>
         <div class="block tb-follow">
           <div class="tb-instagram">
@@ -93,7 +94,7 @@
               allowTransparency
               src="{{ config.site.instagramfeed }}">
             </amp-iframe>
-            <a href="{{ config.site.instagram }}">
+            <a href="{{ config.site.instagram }}" data-vars-outbound-link="{{ config.site.instagram }}">
               <amp-img alt="Follow tanay on Instagram"
                 src="/img/insta.png"
                 width="160"
@@ -120,6 +121,9 @@
       </div>
     </section>
     <footer>
+      <amp-analytics id="ga-config" type="googleanalytics">
+        <script type="application/json">{{{ tracker }}}</script>
+      </amp-analytics>
     </footer>
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   </body>

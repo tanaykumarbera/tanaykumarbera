@@ -1,0 +1,21 @@
+{
+  "vars": {
+    "account": "UA-105070695-1"
+  },
+  "triggers": {
+    "trackPageview": {
+      "on": "visible",
+      "request": "pageview"
+    },
+    "outboundLinks": {
+      "on": "click",
+      "selector": "a",
+      "request": "event",
+      "vars": {
+        "eventCategory": "outbound",
+        "eventAction": "click",
+        "eventLabel": "${outboundLink}"
+      }
+    }
+  }
+}
