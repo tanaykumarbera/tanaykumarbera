@@ -83,7 +83,13 @@
     <section class="tb-connect">
       <div class="block-group">
         <div class="block tb-twitter">
-          <a class="twitter-timeline tb-twitter-placeholder"  data-vars-outbound-link="{{ config.site.twitter }}" data-height="600px" href="{{ config.site.twitter }}">FOLLOW MY TWITTER</a>
+          <amp-iframe height="600px"
+              sandbox="allow-scripts allow-same-origin allow-forms"
+              layout="fixed-height"
+              frameborder="0"
+              allowTransparency
+              src="https://tanay.co/twitter-feed.html">
+          </amp-iframe>
         </div>
         <div class="block tb-follow">
           <div class="tb-instagram">
@@ -125,6 +131,5 @@
         <script type="application/json">{{{ tracker }}}</script>
       </amp-analytics>
     </footer>
-    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   </body>
 </html>
