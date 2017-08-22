@@ -7,6 +7,7 @@
     <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
     <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.1.js"></script>
     <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
 
     <title>Tanay Kumar Bera</title>
     <link rel="canonical" href="https://tanay.co">
@@ -44,11 +45,11 @@
             <h1>Tanay Kumar <strong>Bera</strong></h1>
             <p>A computer guy with some sense of aestheticism. Bong by birth, and hence comes the natural affinity towards food. Love cooking, travelling and reading. I am one of those guys you know who can pull and point his Nikon at anything; still a learner though. I also love talking to new people. It&#x27;s like peeking into an entirely different reality which co exists with yours. Who knows how is this going to affect the future course of actions! Get in touch, and let us explore it together ;)</p>
             <div class="tb-social-links">
-                <a target="_blank" rel="noopener" href="https://blog.tanay.co">BLOG</a>
-                <a target="_blank" rel="noopener" href="https://twitter.com/tanaykumarbera">TWITTER</a>
-                <a target="_blank" rel="noopener" href="https://linkedin.com/in/tanaykumarbera/">LINKEDIN</a>
-                <a target="_blank" rel="noopener" href="https://www.instagram.com/tanaykumarbera">INSTAGRAM</a>
-                <a target="_blank" rel="noopener" href="https://github.com/tanaykumarbera">GITHUB</a>
+                <a target="_blank" rel="noopener" href="https://blog.tanay.co" data-vars-outbound-link="https://blog.tanay.co">BLOG</a>
+                <a target="_blank" rel="noopener" href="https://twitter.com/tanaykumarbera" data-vars-outbound-link="https://twitter.com/tanaykumarbera">TWITTER</a>
+                <a target="_blank" rel="noopener" href="https://linkedin.com/in/tanaykumarbera" data-vars-outbound-link="https://linkedin.com/in/tanaykumarbera">LINKEDIN</a>
+                <a target="_blank" rel="noopener" href="https://www.instagram.com/tanaykumarbera" data-vars-outbound-link="https://www.instagram.com/tanaykumarbera">INSTAGRAM</a>
+                <a target="_blank" rel="noopener" href="https://github.com/tanaykumarbera" data-vars-outbound-link="https://github.com/tanaykumarbera">GITHUB</a>
             </div>
           </div>
         </div>
@@ -72,7 +73,7 @@
               type="carousel">
               {{#posts}}
                 <div class="tb-post-item">
-                  <a target="_blank" rel="noopener" href="https://blog.tanay.co/{{ slug }}">
+                  <a target="_blank" rel="noopener"  data-vars-outbound-link="https://blog.tanay.co/{{ slug }}" href="https://blog.tanay.co/{{ slug }}">
                   <amp-img alt="{{ title }}"
                     src="{{ feature_image }}"
                     width="240"
@@ -91,13 +92,13 @@
             </amp-carousel>
           </template>
         </amp-list>
-        <a target="_blank" href="https://blog.tanay.co/posts" class="tb-posts-read-more" rel="noopener">READ MORE</a>
+        <a target="_blank" href="https://blog.tanay.co/posts" class="tb-posts-read-more" rel="noopener" data-vars-outbound-link="https://blog.tanay.co/posts">READ MORE</a>
       </div>
     </section>
     <section class="tb-connect">
       <div class="block-group">
         <div class="block tb-twitter">
-          <a class="twitter-timeline tb-twitter-placeholder" data-height="600px" href="https://twitter.com/tanaykumarbera">FOLLOW MY TWITTER</a>
+          <a class="twitter-timeline tb-twitter-placeholder"  data-vars-outbound-link="https://twitter.com/tanaykumarbera" data-height="600px" href="https://twitter.com/tanaykumarbera">FOLLOW MY TWITTER</a>
         </div>
         <div class="block tb-follow">
           <div class="tb-instagram">
@@ -108,7 +109,7 @@
               allowTransparency
               src="https://snapwidget.com/embed/425956">
             </amp-iframe>
-            <a href="https://www.instagram.com/tanaykumarbera">
+            <a href="https://www.instagram.com/tanaykumarbera" data-vars-outbound-link="https://www.instagram.com/tanaykumarbera">
               <amp-img alt="Follow tanay on Instagram"
                 src="/img/insta.png"
                 width="160"
@@ -135,6 +136,9 @@
       </div>
     </section>
     <footer>
+      <amp-analytics id="ga-config" type="googleanalytics">
+        <script type="application/json">{"vars":{"account":"UA-105070695-1"},"triggers":{"trackPageview":{"on":"visible","request":"pageview"},"outboundLinks":{"on":"click","selector":"a","request":"event","vars":{"eventCategory":"outbound","eventAction":"click","eventLabel":"${outboundLink}"}}}}</script>
+      </amp-analytics>
     </footer>
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   </body>
