@@ -9,6 +9,17 @@
     "supersededBy": "http://schema.org/Male"
   },
   "url": "https://tanay.co",
+  "image": {
+    "@type": "ImageObject",
+    "caption": "Tanay Kumar Bera",
+    "representativeOfPage": true,
+    "thumbnail": {
+      "@type": "ImageObject",
+      "caption": "Tanay Kumar Bera",
+      "contentUrl": "https://www.gravatar.com/avatar/65ebf9f220d9ccbaf7dc38757b5c7bf8?s=120"
+    },
+    "contentUrl": "https://www.gravatar.com/avatar/65ebf9f220d9ccbaf7dc38757b5c7bf8?s=480"
+  },
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Kormangala",
