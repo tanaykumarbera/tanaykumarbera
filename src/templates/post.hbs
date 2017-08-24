@@ -1,12 +1,12 @@
 <div class="tb-post-item">
   <a target="_blank" rel="noopener"  data-vars-outbound-link="{{ config.site.blog }}/\{{ slug }}" href="{{ config.site.blog }}/\{{ slug }}">
   <amp-img alt="\{{ title }}"
-    src="\{{ feature_image }}"
+    src="{{ config.site.blog }}/\{{ feature_image }}"
     width="240"
     height="172"
     layout="responsive">
     <noscript>
-      <img src="\{{ feature_image }}"
+      <img src="{{ config.site.blog }}/\{{ feature_image }}"
         alt="\{{ title }}"
         width="240" />
     </noscript>
