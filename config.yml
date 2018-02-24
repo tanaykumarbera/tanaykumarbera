@@ -3,13 +3,13 @@ site:
   url: https://tanay.co
   canonicalUrl: https://tanaykumarbera.github.io
   blog: https://blog.tanay.co
-  blogRead: https://blog.tanay.co/posts
+  blogRead: https://blog.tanay.co/archive
   twitter: https://twitter.com/tanaykumarbera
   twitterfeed: https://twitter-feed.tanay.co
   instagram: https://www.instagram.com/tanaykumarbera
   instagramfeed: https://snapwidget.com/embed/425956
 card:
-  description: I am a software developer at Passport Inc, a Charlotte based startup leading in parking and transit solutions. I work mostly on Android and web frontends. If there is something I can help you with, don't hesitate to get in touch. I will try to get back to you as soon as I can.
+  description: I am a software developer from India currently employed with Passport Inc - a Charlotte based startup leading in Parking and Transit solutions. My daily plate of engineering involve bits of Android, web technologies and few QA stuffs as well. Want to learn more? Let's grab a coffee sometime ;)
   emailSubject: 'Just visited your site'
 person:
   name: Tanay Kumar Bera
