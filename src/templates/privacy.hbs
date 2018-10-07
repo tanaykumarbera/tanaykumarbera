@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Privacy Policy • {{ app.name }}</title>
+    <link rel="icon" href="{{ app.fav.link }}" type="{{ app.fav.type }}"/>
+    <link rel="shortcut icon" href="{{ app.fav.link }}" type="{{ app.fav.type }}"/>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+
+    {{!-- Page schema --}}
+    <script type="application/ld+json">{{{ schema }}}</script>
+
+    {{!-- Page styling --}}
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet" />
+    <style>{{{ style }}}</style>
+  </head>
+  <body>
+    <section class="p-header">
+        <div class="p-head">
+            <h1 class="p-header-title">{{ app.name }}</h1>
+            <p class="p-header-meta">Privacy Policy • Effective {{ app.launched }}</p>
+        </div>
+    </section>
+    <section class="p-content">
+        <div class="p-content-holder">
+            <p>
+                If you choose to use {{ app.name }}, then you agree to the collection and use of information in relation to this policy.
+                The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which is accessible at
+                {{ app.name }} unless otherwise defined in this Privacy Policy.
+            </p>
+            <p>
+                The Personal Information we collect is used for providing and improving the service.
+                It will not shared with anyone except as described in this Privacy Policy.
+            </p>
+
+            <h3>Information Collection and Use</h3>
+
+            <p>
+                <strong>Location data</strong>
+                <span>
+                    As this is a tracking application, it does need to collect location after a certain period of time.
+                    But it does so only when you have an active Rooster in place or the application is in the foreground.
+                    For better experience some of this data might be cached on the user device and in no way is being collected by the developer.
+                </span>
+            </p>
+            <p>
+                <strong>Advertisement ID</strong>
+                <span>
+                    The app does use third-party services that may collect information used to identify your online preferences to
+                    serve you relevant sponsored contents. You can opt out of target advertisement under your device preferences and
+                    is not related to {{ app.name }} in any way.
+                </span>
+            </p>
+            <p>
+                <strong>Analytics and Application Log</strong>
+                <span>
+                    In a case of an error in the app, it may send up log traces which is specific to this application,
+                    along with necessary system info to help reproduce it. It facilitates in debugging and fixing up issues a lot
+                    faster so that you can enjoy a crash free application. Also, the app might send a few basic information regarding
+                    the usage pattern to help understand in-app-flow/statistics to increase the quality of service provided.
+                    The information collected is anonymous and does not relate back to you.
+                </span>
+            </p>
+            <p>
+                <strong>Security of Personal information</strong>
+                <span>
+                    We are not storing or exchanging any personal information in this application. We value your trust and thus we are
+                    striving to use commercially acceptable means of protecting it. Remember to download this application from a trusted
+                    provider. The developer is not responsible for any malware or adware being bundled up in case you have downloaded it
+                    from an external source.
+                </span>
+            </p>
+            <p>
+                <strong>Changes to This Privacy Policy</strong>
+                <span>
+                    We may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes.
+                    These changes are effective immediately after they are posted on this page.
+                </span>
+            </p>
+
+            <h3>Contact Us</h3>
+            <p>
+                If you have any questions or suggestions about the policies, do not hesitate to contact us.
+            </p>
+            <p class="mail">{{ app.email }}</p>
+        </div>
+    </section>
+  </body>
+</html>

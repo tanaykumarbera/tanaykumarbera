@@ -4,10 +4,12 @@ import Handlebars from 'handlebars-template-loader/runtime';
 import renderLandingPage from './templates/index';
 import renderTwitterFeed from './templates/twitter-feed';
 import post from './templates/post';
+import renderPrivacyPolicy from './templates/privacy';
 
 /* IMPORT CORRESSPONDING PAGE STYLES */
 import styleLandingPage from './less/index';
 import styleTwitter from './less/twitter-feed';
+import stylePrivacy from './less/privacy';
 
 /* IMPORT json-ld SCHEMA */
 import schemaLandingPage from './schema.json';
@@ -17,6 +19,7 @@ import tracker from './tracker.json';
 
 /* IMPORT SITE CONFIGURATION */
 import config from '../config';
+import roadrooster from './policies/roadrooster'
 
 /* REGISTER POST TEMPLATE AS PATIAL */
 Handlebars.registerPartial('post', post);
@@ -32,5 +35,9 @@ export default () => ({
   '/twitter-feed.html': renderTwitterFeed({
     config,
     style: styleTwitter
+  }),
+  '/appusage/privacy/roadrooster.html': renderPrivacyPolicy({
+    app: roadrooster,
+    style: stylePrivacy
   })
 });
