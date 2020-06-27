@@ -9,7 +9,7 @@ site:
   instagram: https://www.instagram.com/tanaykumarbera
   instagramfeed: https://snapwidget.com/embed/425956
 card:
-  description: I am a software developer from India currently employed with Passport Inc - a Charlotte based startup leading in Parking and Transit solutions. My daily plate of engineering involve bits of Android, web technologies and few QA stuffs as well. Want to learn more? Let's grab a coffee sometime ;)
+  description: I am a software developer from India currently employed with Grab. My daily plate of engineering involves bits of payment and wallet handling. Outside Grab, I do enjoy occassional tinkering with iot and Home Assistant. Want to learn more? Let's grab a coffee sometime ;)
   emailSubject: 'Just visited your site'
 person:
   name: Tanay Kumar Bera
@@ -19,7 +19,7 @@ person:
   email: tanaykumarbera@gmail.com
   url: https://tanay.co
   sameAs: https://tanaykumarbera.github.io
-  description: A computer guy with some sense of aestheticism. Bong by birth, and hence comes the natural affinity towards food. Love cooking, travelling and reading. I am one of those guys you know who can pull and point his Nikon at anything; still a learner though. I also love talking to new people. It's like peeking into an entirely different reality which co exists with yours. Who knows how is this going to affect the future course of actions! Get in touch, and let us explore it together ;)
+  description: A computer guy with some sense of aestheticism. Bong by birth, and hence comes the natural affinity towards food. Loves cooking, travelling and reading. I am one of those guys you know who can pull and point his Nikon at anything; still a learner though. I also love talking to new people. It's like peeking into an entirely different reality which co exists with yours. Who knows how is this going to affect the future course of actions! Get in touch, and let us explore it together ;)
   social:
     - site: 'BLOG'
       url: 'https://blog.tanay.co'
